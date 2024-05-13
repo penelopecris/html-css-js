@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Média</title>
+</head>
+
+<body>
+
+  <h1>Calculadora de Média</h1>
+
+  <script>
+    var nota1 = prompt("Digite a primeira nota:");
+    var nota2 = prompt("Digite a segunda nota:");
+    var nota3 = prompt("Digite a terceira nota:");
+
+    // Converte as entradas do usuário em números
+    nota1 = parseFloat(nota1);
+    nota2 = parseFloat(nota2);
+    nota3 = parseFloat(nota3);
+
+    // Verifica se as entradas do usuário são números válidos
+    if (isNaN(nota1) || isNaN(nota2) || isNaN(nota3)) {
+      alert("Por favor, insira números válidos para as notas.");
+    } else {
+      // Calcula a média das três notas
+      var media = (nota1 + nota2 + nota3) / 3;
+
+      // Exibe a média para o usuário
+      alert("A média das três notas é: " + media.toFixed(2));
+    }
+  </script>
+
+</body>
+
+</html>
+
+
+    //ex02
+
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora Básica</title>
+</head>
+
+<body>
+
+  <h1>Calculadora Básica</h1>
+
+  <script>
+    // Solicita ao usuário que escolha uma operação
+    var operacao = prompt("Escolha uma operação: soma, subtração, multiplicação ou divisão").toLowerCase();
+
+    // Solicita ao usuário que insira dois números
+    var numero1 = prompt("Digite o primeiro número:");
+    var numero2 = prompt("Digite o segundo número:");
+
+    // Converte as entradas do usuário em números
+    numero1 = parseFloat(numero1);
+    numero2 = parseFloat(numero2);
+
+    // Verifica se as entradas do usuário são números válidos
+    if (isNaN(numero1) || isNaN(numero2)) {
+      alert("Por favor, insira números válidos.");
+    } else {
+      // Realiza o cálculo apropriado com base na operação escolhida
+      var resultado;
+      switch (operacao) {
+        case "soma":
+          resultado = numero1 + numero2;
+          break;
+        case "subtração":
+          resultado = numero1 - numero2;
+          break;
+        case "multiplicação":
+          resultado = numero1 * numero2;
+          break;
+        case "divisão":
+          if (numero2 === 0) {
+            alert("Não é possível dividir por zero.");
+          } else {
+            resultado = numero1 / numero2;
+          }
+          break;
+        default:
+          alert("Operação inválida.");
+      }
+
+      // Exibe o resultado da operação para o usuário
+      if (resultado !== undefined) {
+        alert("O resultado da operação é: " + resultado.toFixed(2));
+      }
+    }
+  </script>
+
+</body>
+
+</html>
